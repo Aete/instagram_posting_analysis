@@ -1,0 +1,3497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.8.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 37.5385,
+    "longitude": 126.9925,
+    "pitch": 0,
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "@@type": "HeatmapLayer",
+      "aggregation": "MEAN",
+      "data": [
+        {
+          "geometry": {
+            "coordinates": [
+              126.989588771599,
+              37.5333936228886
+            ],
+            "type": "Point"
+          },
+          "posting_count": 29,
+          "store_name": "\ub85c\uc6b0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001904624536,
+              37.5372196844529
+            ],
+            "type": "Point"
+          },
+          "posting_count": 29,
+          "store_name": "\ub85c\uc6b0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996402030225,
+              37.5332534911813
+            ],
+            "type": "Point"
+          },
+          "posting_count": 26,
+          "store_name": "\uc774\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99916331889,
+              37.5323668670975
+            ],
+            "type": "Point"
+          },
+          "posting_count": 26,
+          "store_name": "\uc774\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995226560351,
+              37.5348473602408
+            ],
+            "type": "Point"
+          },
+          "posting_count": 25,
+          "store_name": "\ucf54\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995825010985,
+              37.5340955707619
+            ],
+            "type": "Point"
+          },
+          "posting_count": 24,
+          "store_name": "\uc774\ud074\ub798\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990417677239,
+              37.5331754504109
+            ],
+            "type": "Point"
+          },
+          "posting_count": 22,
+          "store_name": "\uba54\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994339754372,
+              37.540219061687
+            ],
+            "type": "Point"
+          },
+          "posting_count": 21,
+          "store_name": "\uc5f4\uc2ec\ud788"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987275464295,
+              37.5413030159695
+            ],
+            "type": "Point"
+          },
+          "posting_count": 21,
+          "store_name": "\ud574\ubc29\ucd0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989162641002,
+              37.5339486253002
+            ],
+            "type": "Point"
+          },
+          "posting_count": 20,
+          "store_name": "\uc573\ub354\ud504\ub860\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990377300339,
+              37.5336526602651
+            ],
+            "type": "Point"
+          },
+          "posting_count": 20,
+          "store_name": "\ub4dc\ub808\uc2a4\ucf54\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993881647952,
+              37.5338898096175
+            ],
+            "type": "Point"
+          },
+          "posting_count": 20,
+          "store_name": "\ubb38\ud654"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987958494692,
+              37.5393265705959
+            ],
+            "type": "Point"
+          },
+          "posting_count": 20,
+          "store_name": "\ucde8\ud5a5"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991696390473,
+              37.5415661102869
+            ],
+            "type": "Point"
+          },
+          "posting_count": 20,
+          "store_name": "\ud0a4\ud0a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990711299442,
+              37.5365749077017
+            ],
+            "type": "Point"
+          },
+          "posting_count": 19,
+          "store_name": "\uc815\ub3c4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98849476383,
+              37.5389977783211
+            ],
+            "type": "Point"
+          },
+          "posting_count": 18,
+          "store_name": "\ub0a8\uc0b0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997952600062,
+              37.5366005344765
+            ],
+            "type": "Point"
+          },
+          "posting_count": 18,
+          "store_name": "\uc624\uc544\uc2dc\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99489419726,
+              37.5376918408803
+            ],
+            "type": "Point"
+          },
+          "posting_count": 18,
+          "store_name": "\uc548\uc8fc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988568621892,
+              37.5360429783764
+            ],
+            "type": "Point"
+          },
+          "posting_count": 17,
+          "store_name": "\ucf54\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.00479141059,
+              37.5328559447087
+            ],
+            "type": "Point"
+          },
+          "posting_count": 16,
+          "store_name": "\ud0c0\uc784"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992044432869,
+              37.5350455039328
+            ],
+            "type": "Point"
+          },
+          "posting_count": 16,
+          "store_name": "\ubc84\ud130"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997052771137,
+              37.533664491155
+            ],
+            "type": "Point"
+          },
+          "posting_count": 15,
+          "store_name": "\ud50c\ub808\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988580781102,
+              37.537655955968
+            ],
+            "type": "Point"
+          },
+          "posting_count": 12,
+          "store_name": "\ud14c\uc624\ud2b8\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992565419501,
+              37.5341669233663
+            ],
+            "type": "Point"
+          },
+          "posting_count": 11,
+          "store_name": "\ud3ec\uc778\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992983698766,
+              37.5350354963519
+            ],
+            "type": "Point"
+          },
+          "posting_count": 10,
+          "store_name": "\ub85c\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993483742787,
+              37.534030586442
+            ],
+            "type": "Point"
+          },
+          "posting_count": 10,
+          "store_name": "\ucfe0\ud0a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990417677239,
+              37.5331754504109
+            ],
+            "type": "Point"
+          },
+          "posting_count": 10,
+          "store_name": "\ub2c8\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992349374953,
+              37.531723241438
+            ],
+            "type": "Point"
+          },
+          "posting_count": 9,
+          "store_name": "\uc77c\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992783205625,
+              37.534799514194
+            ],
+            "type": "Point"
+          },
+          "posting_count": 9,
+          "store_name": "\uc77c\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 9,
+          "store_name": "\ub9c8\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001902823238,
+              37.5373548263545
+            ],
+            "type": "Point"
+          },
+          "posting_count": 8,
+          "store_name": "\ubc31\uc0ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 8,
+          "store_name": "\ud558\ub298"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99786158309,
+              37.5324098906016
+            ],
+            "type": "Point"
+          },
+          "posting_count": 8,
+          "store_name": "\ubc14\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99971731244,
+              37.5374805013817
+            ],
+            "type": "Point"
+          },
+          "posting_count": 8,
+          "store_name": "\uc640\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999896644304,
+              37.5359141977399
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\ubc18\uac00"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991592588254,
+              37.5341496096503
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\ud14c\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000219170846,
+              37.5320964857869
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\uae4a\uc740"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\uc57d\uc18d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992134017801,
+              37.5334333939473
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\ubbf8\uc6a9\uc2e4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991861036598,
+              37.5394230258539
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\uc608\uc694"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000060678992,
+              37.5337981246533
+            ],
+            "type": "Point"
+          },
+          "posting_count": 7,
+          "store_name": "\uacf5\uac10"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999997990759,
+              37.5367980825678
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\ub9c8\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992783205625,
+              37.534799514194
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\ub7ec\ube0c\ud558\uc6b0\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994108944768,
+              37.5329726774546
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\uc778\uc2a4\ud14c\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997892573227,
+              37.5351673596807
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\ud06c\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989889624723,
+              37.5345765684078
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\uc774\ud0dc\uc6d0\uc9d0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98755531134,
+              37.5398547316698
+            ],
+            "type": "Point"
+          },
+          "posting_count": 6,
+          "store_name": "\ud5e4\ubbf8\uc548"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989244514582,
+              37.5345890695013
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\uc5d8\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\uc704\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990392743128,
+              37.5333464362276
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ubca0\ub974"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994566021975,
+              37.5351661152218
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ud3ec\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98836474262,
+              37.5343833057723
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ubd80\ub2e4\uc2a4\ubca8\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000775011805,
+              37.5353810048114
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ub9c8\ub098"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999672055328,
+              37.5357861488107
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ud0a4\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993738870333,
+              37.5419890040777
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ube0c\ub808\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98836474262,
+              37.5343833057723
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ubd80\ub2e4\uc2a4\ubca8\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991959414355,
+              37.5413611153226
+            ],
+            "type": "Point"
+          },
+          "posting_count": 5,
+          "store_name": "\ud574\ud53c\ud37c\ud53c\ud558\uc6b0\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988478964377,
+              37.535979137153
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\ub274\uba54\ub9ac\ud06c\uc2a4\ud29c\ub514\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991713550408,
+              37.5352499200565
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\ub204\uc5d0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997041188071,
+              37.5345293985126
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\uac00\ub4e0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.998869779024,
+              37.5323193265837
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\uc8fc\uc300\ub871"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001672703246,
+              37.5333972813665
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\uc18c\ud558"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995678342898,
+              37.5332203073156
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\uc560\ud50c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.003916166843,
+              37.5323079364574
+            ],
+            "type": "Point"
+          },
+          "posting_count": 4,
+          "store_name": "\ud544\ub77c\ud14c\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991158924464,
+              37.538624108656
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud558\ud558"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.00146368958,
+              37.5304040339217
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc624\ube0c\uc81c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993249118173,
+              37.5346503091083
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uce74\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002855772297,
+              37.5303707438374
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc774\ud0dc\uc6d0\ud074\ub77c\uc4f0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996188571713,
+              37.5348285101974
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uadf8\ub8e8\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991994656209,
+              37.5345404926376
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud604\ub300"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.00459369688,
+              37.5332597500883
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ub9c8\ub2f9"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987697456267,
+              37.5368734869689
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc5ec\uc778"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992724594172,
+              37.5399980545146
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ubc14\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992179589061,
+              37.5350917098376
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc18c\uc6b8\ud2b8\ub808\uc778"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud504\ub85c\ud3ec\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud074\ub85c\ubc84"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995417486744,
+              37.5341101256677
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc6b0\uc6d4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987590558189,
+              37.5347370898545
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc625\ud0d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999263426568,
+              37.5384227553642
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ucc54\ud504\ucee4\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.986939044773,
+              37.5377319876592
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc2a4\ud0e0\ub529"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994372415335,
+              37.5327316385017
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ucf54\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000219170846,
+              37.5320964857869
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc624\ube0c\uc81c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995470911753,
+              37.5343448524858
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ub8e8\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996148872955,
+              37.5344136908881
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc2dc\ub098\ubaac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uce74\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98833225747,
+              37.5351128754809
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud5e4\ubbf8\uc548\ucee4\ud53c\ubc14"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990855373367,
+              37.5334404952392
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud14c\uc774\ud504"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990584354683,
+              37.5392769624591
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ud0c0\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.998360178984,
+              37.5340450172731
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc544\uce74\uc774\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99314993329,
+              37.5403440795954
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc0c8\ube44\uc9c0\uac00\ub4e0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992565419501,
+              37.5341669233663
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\uc774\ub4e0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000372420804,
+              37.5358731737783
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ube14\ub791"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995823682139,
+              37.534194674692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ucf54\ub07c\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001803702255,
+              37.5312088414972
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ucc54\ud504\ucee4\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992814224116,
+              37.5324930974048
+            ],
+            "type": "Point"
+          },
+          "posting_count": 3,
+          "store_name": "\ucc54\ud504\ucee4\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987065468079,
+              37.5367509315388
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ucf5c\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992226706343,
+              37.5332719964388
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc774\uc988\ube44"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99359801995,
+              37.5347884401659
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ubcf4\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000372420804,
+              37.5358731737783
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud30c\ud0a8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989154371758,
+              37.5345612665088
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc220\uaf2c\ub9c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc624\ub80c\uc9c0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992926235833,
+              37.5409909253985
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ubbf8\uc790\uc11c\uc6b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99213498776,
+              37.5333613184343
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc774\ud0dc\uc6d0\uc591\uaf2c\uce58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.986939044773,
+              37.5377319876592
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ubc14\ubca0\ud050\uc9d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991212544371,
+              37.5338039657982
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uad6c\uad6c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990018190167,
+              37.5334333381728
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc6b1\uc774\uc871\ubc1c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988099517883,
+              37.5372643829575
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc640\uc774\uc544\ud2b8\uc2a4\ud29c\ub514\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994853977966,
+              37.5322581830208
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc544\ub378"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99210488071,
+              37.5347576847772
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub354\uc11c\uc6b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98879428775,
+              37.5344140161462
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc774\ud0dc\uc6d0\ub9e5\uc8fc\uc9d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992783205625,
+              37.534799514194
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc57c\uc0c1\ud574"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996910012024,
+              37.5341858862599
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub9b4\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993494034839,
+              37.5332647838301
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc2a4\ud0dc\ud504\uc628\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994208585946,
+              37.533135714707
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud50c\ub79c\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990858552903,
+              37.5340442240649
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc218\ub2c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002707106232,
+              37.5381365224047
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uce90\ub864"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99168570706,
+              37.5356371325506
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc544\uc9c0\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99125956365,
+              37.5395530462747
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ucd08\uc2b9\ub2ec"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987237227924,
+              37.5374372000646
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub808\uc2a4\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.9906722966,
+              37.5335921086612
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc2a4\ud15d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991980796111,
+              37.5347295942395
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub85c\uc988\uc564\ud06c\ub77c\uc6b4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993200957321,
+              37.534866149858
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud53c\uce58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990836024612,
+              37.5331970471208
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub808\ud2b8\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.00482032222,
+              37.5332346286611
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc6b0\uc815"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99112495044,
+              37.533586966154
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub18d\ub2f4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990774822476,
+              37.5327009480496
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc694\uc18c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002419403669,
+              37.530853624739
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc870\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990705650807,
+              37.5344754199833
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc655\ud0c0\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996886087837,
+              37.5334378134744
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc774\ubbfc\uc544\ud5e4\uc5b4\ud14c\ud06c\ub2c9"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994671648695,
+              37.5340407052551
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc2a4\uce74\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992903927535,
+              37.5333949099439
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc774\ud0dc\uc6d020"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989293288963,
+              37.5334902095107
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uac24\ub7ec\ub9ac\uc790\uc720"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992258507013,
+              37.531749497488
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud53c\uce58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989049393388,
+              37.53647058718
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub9c8\uba54\uc885394"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991669832386,
+              37.5309335297143
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud4e8\uc804"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995010566886,
+              37.5340796319346
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc544\uc9c0\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995105305233,
+              37.5337650715142
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc720\ub2c8\ucf58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995615021802,
+              37.5311924111897
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub178\ub178\uc0f5"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992915892747,
+              37.5341879336846
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub098\ub2c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999698294196,
+              37.5363630414974
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ube14\ub8e8\ub3c4\uc5b4\ubd81\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991198170049,
+              37.5331911308363
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc88b\uc740\ube44\ub204\uc5f0\uad6c\uc18c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995470911753,
+              37.5343448524858
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc2e0\uc138\uacc4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989141112544,
+              37.5347053205285
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc628\ub3c4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991773393224,
+              37.5350071482794
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub370\ubaa8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990692251995,
+              37.5337905096116
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud55c\ub098"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991198170049,
+              37.5331911308363
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ubcf4\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988453546311,
+              37.5345102130609
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub9e4\ub2c8\uba40\uc2a4\ubaa8\ud06c\ud558\uc6b0\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001433441779,
+              37.5335214051783
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ubba4\ub545"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992078588453,
+              37.5400736364153
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ube44\uc2a4\ud14c\uae4c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988379066487,
+              37.5391860069327
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub300\ubc15\uc774\ub124"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989189037355,
+              37.5336695266392
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub79c\ub364"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987859346452,
+              37.5391274906434
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc624\uc624\ub3c4\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991286042737,
+              37.5308671788233
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uce90\ub864"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992631395969,
+              37.5326266950959
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ub2d8\ubd80\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990778509371,
+              37.5341066133323
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc0ac\uacc4\uc808"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000911616584,
+              37.5353190872828
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\uc544\ucfe0\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989986368199,
+              37.5366317828298
+            ],
+            "type": "Point"
+          },
+          "posting_count": 2,
+          "store_name": "\ud504\ub9ac\ub79c\uc11c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995420145497,
+              37.5339119178276
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub098\uc774\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991433655972,
+              37.532508346204
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc18c\uc11c\uc6d0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990767729755,
+              37.5407832771685
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uce74\ud398\ube44\uc2a4\ud0b7"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987447773355,
+              37.5394393283858
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub354\ubca0\uc774\ucee4\uc2a4\ud14c\uc774\ube14"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000800283674,
+              37.5351829881478
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud788\ub4e0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99980155129,
+              37.5328678508165
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2a4\ud29c\ub514\uc624\ubc18"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987185982229,
+              37.5387162463465
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud1a0\ub9ac\uc544\uc5d0\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992068551339,
+              37.5357755579324
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud050\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98819491957,
+              37.5343908613121
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucf54\ub808\uc544\ub178\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubcf4\ub178"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99942989181,
+              37.5369734798671
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uce58\uc988\ud50c\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992161606789,
+              37.5355871322756
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub3c8\ubcf4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993842373337,
+              37.5359708942245
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub85c\uadf8\uba3c\ud2b8\ube4c\ub77c\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991944758873,
+              37.5340444907259
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud5ec\ub9ac\uc624\uc2a4\uc2a4\ud29c\ub514\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98819491957,
+              37.5343908613121
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc774\ud0dc\uc6d0\uc18c\uc8fc\uc9d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000757927788,
+              37.5358133631391
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2e4\ub85c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989422726707,
+              37.5339598617709
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\ud130\uc2dc\ud2f0\ubc14\uc774\ub9e4\ub2c8\uba40"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995420145497,
+              37.5339119178276
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucf08\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99726142589,
+              37.534981792594
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud560\ub784\uac00\uc774\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988453546311,
+              37.5345102130609
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud06c\ub9ac\uc2a4\ud53c\ud3ec\ud06c\ud0c0\uc6b4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994751392717,
+              37.5348433163081
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uace8\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc720\uc815"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994208041647,
+              37.5340187366333
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub85c\uc6b0\uc564\uc2ac\ub85c\uc6b0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997041188071,
+              37.5345293985126
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uba58\uc57c\uc0b0\ub2e4\uc774\uba54"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995226560351,
+              37.5348473602408
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc6b0\uc789"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995420145497,
+              37.5339119178276
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubb34\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988043462378,
+              37.5347139404146
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9ac\uce58\ubaac\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987046232598,
+              37.5373364467507
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc6b8\ubc84\ub9b0\uc2dc\ud2f0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992503479768,
+              37.5412936748992
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud53c\uce74"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc870\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989422726707,
+              37.5339598617709
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud638\uc9c0\ubcf4\ubcf4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001399824464,
+              37.5368910396249
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc544\uc6b0\ud504\uae00\ub81b"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993504379474,
+              37.533336955798
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9e4\ub355\uc2a4\ud53c\uc790"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996148872955,
+              37.5344136908881
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc9c0\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991236384605,
+              37.5337140647225
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub354\ubdf0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992196926798,
+              37.5338033602524
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub098\uc774\ud2b8\uc0ac\uc6b4\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989581899616,
+              37.5397729749475
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud6c4\ub80c\ub4dc\uce58\ud0a8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995357535621,
+              37.5343619089562
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud504\ub9ac\uc998"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988301084765,
+              37.5390952342222
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc11c\uc6b8\uc0b4\ub871"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989864555465,
+              37.5339185895873
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9ac\ucf54"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud574\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995420145497,
+              37.5339119178276
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc624\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994681796064,
+              37.5315989524842
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2a4\ud398\uc774\uc2a4\uc18c\ub9c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.997052771137,
+              37.533664491155
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\ub9ac\ud5e4\uc774\uc988"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991198170049,
+              37.5331911308363
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc11c\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987843051024,
+              37.538658806914
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub85d\uc2dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996162632716,
+              37.5308546690712
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubbfc\ub4e4\ub808"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.9922260174,
+              37.5341640274348
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud2b8\ub85c\uc774\uce74"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992814224116,
+              37.5324930974048
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2ec\ud30c\ud2f0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999985353463,
+              37.5368970907695
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc14\ub2e4\uc2dd\ub2f9"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987540601469,
+              37.539268925557
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucf00\uc774\ud31d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990586161647,
+              37.5332669954156
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9ac\uc9c0\ud2b8\ucee4\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc5c5\uadf8\ub808\uc774\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995417486744,
+              37.5341101256677
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud398\uc774\ub354"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992871470671,
+              37.5316015484662
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc870\ub098\ub2e8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995721058916,
+              37.533409890598
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc774\ud0dc\uc6d0\ud544\ub77c\ud14c\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988392328157,
+              37.53904195314
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9cc\uc11d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992301171457,
+              37.5336240403704
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\ub9ac\uc19d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001515966209,
+              37.5366667598192
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc218\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992270082668,
+              37.540138344026
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2a4\ucf00\uc77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995860378786,
+              37.5415835720376
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube44\uc190"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube44\ub2c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98770769936,
+              37.5352787221687
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uace0\uc9d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002886894379,
+              37.5373811607466
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9b4\ub9ac\uc5b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002117159118,
+              37.5365547054227
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2dc\ub77d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991909120874,
+              37.5341703331228
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud380\uce58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991411573891,
+              37.5341480637844
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc14\ubd80"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992542107262,
+              37.5350587612528
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc0d8\ub77c\uc774\uc5b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988590032411,
+              37.5361332664292
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc6b0\uc5f0\ud55c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991001353689,
+              37.5335228368716
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud55c\uc6b0\ubb3c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.986947710577,
+              37.5412731731987
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub2e4\ubaa8\ud1a0\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001198921069,
+              37.5358351148451
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uba3c\ub370\uc774\uc5d0\ub514\uc158"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992193243938,
+              37.5357586012205
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9b0\ub2e4\ud53d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993207668174,
+              37.5352086050171
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc544\ud2c0\ub9ac\uc5d0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999896644304,
+              37.5359141977399
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc5b4\uba54\uc774\uc9d5\ud0c0\uc774"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989811820923,
+              37.5386666550804
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud5c8\ube14"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996179964071,
+              37.5413790485683
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubcf4\ud61c\ubbf8\uc548\uac24\ub7ec\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999890007689,
+              37.5321747929564
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud788\uc5b4\ub85c\ub3c4\ub11b"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990774844853,
+              37.5335389222608
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube0c\ub77c\uc774\ub9ac\ud37c\ube14\ub9ad\ud478\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993261058269,
+              37.5329203998667
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc774\ud0dc\uc6d0\uad50\uc9d1\ud569"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994249484254,
+              37.5351453988033
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud558\ubc14\ub098"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992901260202,
+              37.5403239380826
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9c8\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995470911753,
+              37.5343448524858
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucf54\uc9c0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc9c0\uc548"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989701736764,
+              37.5401163978709
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc138\ud76c\ub124\uae40\ubc25"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99489419726,
+              37.5376918408803
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube44\uc190"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992598679659,
+              37.53758217544
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9c8\uc774\ud558\uc6b0\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999903366,
+              37.5320217279008
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc84\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989106334545,
+              37.5389579630563
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub0a8\uc0b0\uc640\uc774\ub108\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991158756504,
+              37.5411560474708
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube14\ub8e8\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.004414436273,
+              37.5399350030916
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc00\ub808"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994570618417,
+              37.5348237563722
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubabd\ud0a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999799622979,
+              37.5321650169887
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc18c\ubd84"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001065423459,
+              37.5348158016947
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc720\ud55c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989346347291,
+              37.5362658882698
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc00\ubc00\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995105305233,
+              37.5337650715142
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc774\ud0dc\uc6d0\ubb38\uad6c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002621667728,
+              37.5386043454574
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc9c0\ub2c8\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994942933994,
+              37.5416478505207
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub7a9\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987222426207,
+              37.5410412577784
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc624\ube10"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987284707086,
+              37.5414562730335
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\ub85c\ucf54\ucf54"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994557732431,
+              37.5349407828137
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uac8c\ub354\ub9c1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989862203177,
+              37.53996459281
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub178\ubc14"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989346822033,
+              37.5345539032437
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uae4c\ub97c\ub85c\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988010982923,
+              37.5346055364536
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud558\ub8e8\ud544\ub77c\ud14c\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002981957304,
+              37.5395895295551
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucc28\ub9ac\ub2e4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988625428344,
+              37.5377013906898
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud0c0\uc774\uac70\uc5d0\uc2a4\ud504\ub808\uc18c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994513801912,
+              37.5331563347934
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\uc5ec\ub77c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uce74\uba5c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999693239539,
+              37.5367414386145
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubabd\ud0a4\uc204\ub354"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990368659097,
+              37.5334543559937
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc560\ub2c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992552852027,
+              37.5334189468426
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud2f0\ud0a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991154094031,
+              37.5398224591683
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub371\uc2a4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.002913570254,
+              37.5336780793504
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud578\ub4e4\uc704\ub4dc\ucf00\uc5b4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001626101401,
+              37.5368929528962
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub204\ub2c8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990338501885,
+              37.5340127474294
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc810\ubcf4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992409617235,
+              37.5322914154477
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud54c\ud2b8"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999463835003,
+              37.5361267828668
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2dc\uace8\ubc25\uc0c1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991129562349,
+              37.5332446075746
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud5f5\uc2dc\ubc14\uadf9\uc7a5"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.991669832386,
+              37.5309335297143
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc640\uc778\ubc45\ud06c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992915892747,
+              37.5341879336846
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud504\ub9ac\uce20\uc544\ub974\ud22c\uc544"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.998836297427,
+              37.5348239557491
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubb34\uc9c0\uac1c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988869346758,
+              37.5380729085757
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc7ad\uc7ad"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.988835282443,
+              37.5389196004996
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub099\uc6d0\ub5a1\uc9d1"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992499478341,
+              37.534022193233
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub178\uba38\uc2dc\ubc84\uac70"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.000957952738,
+              37.5352383849999
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubca0\ub974\ud06c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987185982229,
+              37.5387162463465
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud544\ub9ac\ud544\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990035713823,
+              37.5338119278692
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubbf8\uc9c4"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99489419726,
+              37.5376918408803
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc170\ud504\ud14c\uc774\ub108"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999910965997,
+              37.5356890571328
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc6b0\uce04\ub77c\uba58"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.987540601469,
+              37.539268925557
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uacbd\ub9ac\ub2e8\uae38\uc640\uc778"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992106623999,
+              37.5413533614549
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub808\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996816849573,
+              37.5343833253519
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub178\ud2f0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.99044360141,
+              37.5337703632266
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucf54\uc9c0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992080809289,
+              37.5323426723923
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub9ac\uc800\ube0c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.003075152941,
+              37.5376891063913
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc544\ub530"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995417486744,
+              37.5341101256677
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc778\ud130\ub0b4\uc154\ub110"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              127.001212037204,
+              37.5357000686277
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub3c4\ub178"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.993725807257,
+              37.5412770661986
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc0b4\ub77c\ub315\uc570\ubc84\uc2dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992206823381,
+              37.5347495443379
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ube14\ub9ac\uc2a4\ud480"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.986598181853,
+              37.5411800694379
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc54c\ub808"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989244514582,
+              37.5345890695013
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ucfe0\uc2dc\ub77c\ucfe0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995825010985,
+              37.5340955707619
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc2dc\ubc14"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990253704139,
+              37.5335885302085
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud53c\ud50c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98819491957,
+              37.5343908613121
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud54c\ud53c"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.986466460964,
+              37.54004362108
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud53c\uc790\uc624"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.98901532409,
+              37.5339653851442
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ud3ec\uc5d0\ubc84"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.994600381705,
+              37.5342923918128
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc5d8\ub9ac\uc5c7\uc758\uc6d0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.996924462912,
+              37.5339517366231
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubca0\ud2f0"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.999997990759,
+              37.5367980825678
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub354\ube44\ud2c0\uc988\ub77c\uc774\ube0c\ud38d"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990771959606,
+              37.5396299740852
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\ud558"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.989341824807,
+              37.5332473421611
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\uc624\ub760\uc824\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.995205312248,
+              37.5339010796103
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ub2e4\ubaa8\ud1a0\ub9ac"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.990018190167,
+              37.5334333381728
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubaa8\uc5d0\ub4dc"
+        },
+        {
+          "geometry": {
+            "coordinates": [
+              126.992871470671,
+              37.5316015484662
+            ],
+            "type": "Point"
+          },
+          "posting_count": 1,
+          "store_name": "\ubc00\ub808"
+        }
+      ],
+      "getPosition": "@@=geometry.coordinates",
+      "getWeight": "@@=posting_count",
+      "id": "b3d01ee9-1835-43d2-b031-2ae3fb21d603",
+      "opacity": 0.5
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = true;
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
